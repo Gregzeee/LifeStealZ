@@ -32,6 +32,10 @@ commands:
         permission: lifestealz.viewhearts
         description: view other players max hearts
         permission-message: §cYou don't have permission to use this command!
+    heartbank:
+        permission: lifestealz.heartbank
+        description: open your heart bank
+        permission-message: §cYou don't have permission to use this command!
 
 permissions:
     lifestealz.managedata:
@@ -70,3 +74,6 @@ permissions:
     lifestealz.viewhearts:
         description: allows to view other players max hearts
         default: true
+    lifestealz.heartbank:
+        description: allows you to open a heart bank
+        default: op
