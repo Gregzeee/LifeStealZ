@@ -7,9 +7,17 @@
 [![github](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/available/github_vector.svg)](https://github.com/KartoffelChipss/lifestealz)
 [![modrinth](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/available/modrinth_vector.svg)](https://modrinth.com/plugin/lifestealz)
 [![discord-plural](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/social/discord-plural_vector.svg)](https://strassburger.org/discord)
-[![gitbook](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/documentation/gitbook_vector.svg)]([https://lsz.strassburger.dev/](https://lsz.strassburger.dev/))
+[![gitbook](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/documentation/gitbook_vector.svg)](https://lsz.strassburger.dev/)
 
-LifeStealZ is a lifesteal SMP plugin, that allows you to steal hearts from other players, when you kill them. If a player has no more hearts, he is eliminated. You can craft additional hearts or a revive crystal. With this crystal, you can bring back eliminated teammates.
+LifeSteal is a lifesteal SMP plugin, that allows you to steal hearts from other players, when you kill them. If a player has no more hearts, he is eliminated. You can craft additional hearts or a revive crystal. With this crystal, you can bring back eliminated teammates.
+
+This LifestealZ fork adds the following features:
+- /heartbank - This command opens up a gui that shows how many hearts you have in your heartbank. I'm not sure whether you will be able to withdraw or deposit any hearts to it in the future. As of now the only
+way of getting hearts in your heartbank is by killing another player.
+
+- /heartshop - This command opens up a gui that shows multiple custom items with abilities that can help the player in combat. These items are only purchasable with the hearts inside your heartbank.
+
+- /upgrade/heartcap(Haven't decided on a command yet) - This fork will limit the amount of hearts the player can have when they first start out. Capped at 12 for example and they can upgrade their heart cap higher by running this command and paying a fee, completing a quest or anything else.
 
 LifeStealZ offers a great amount of admin tools and is highly customizable. You can change every message and change everything about the custom items.
 
@@ -270,7 +278,7 @@ There you can set the following flags:
 
 ![PlaceholderBanner](https://strassburger.org/img/lifestealz/banner_placeholder.png)
 
-If you are using [Placeholderapi](https://www.spigotmc.org/resources/placeholderapi.6245/) on your server, you can use the following placeholders:
+If you are using [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) on your server, you can use the following placeholders:
 
 - **%lifestealz_hearts%** - The amount of hearts a user has
 - **%lifestealz_maxhearts%** - The maximum amount of hearts a user can have
