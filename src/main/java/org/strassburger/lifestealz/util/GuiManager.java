@@ -68,7 +68,7 @@ public class GuiManager {
         else inventory.setItem(52, glass);
     }
 
-    private static void openHeartBankGUI(Player player) {
+    public static void openHeartBankGUI(Player player) {
         Inventory inventory = Bukkit.createInventory(player, 9, MessageUtils.getAndFormatMsg(false, "messages.heartBankTitle", "&8Heart Bank"));
         MiniMessage miniMessage = MiniMessage.miniMessage();
 
