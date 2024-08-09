@@ -11,6 +11,14 @@
 
 LifeSteal is a lifesteal SMP plugin, that allows you to steal hearts from other players, when you kill them. If a player has no more hearts, he is eliminated. You can craft additional hearts or a revive crystal. With this crystal, you can bring back eliminated teammates.
 
+This LifestealZ fork adds the following features:
+- /heartbank - This command opens up a gui that shows how many hearts you have in your heartbank. I'm not sure whether you will be able to withdraw or deposit any hearts to it in the future. As of now the only
+way of getting hearts in your heartbank is by killing another player.
+
+- /heartshop - This command opens up a gui that shows multiple custom items with abilities that can help the player in combat. These items are only purchasable with the hearts inside your heartbank.
+
+- /upgrade/heartcap(Haven't decided on a command yet) - This fork will limit the amount of hearts the player can have when they first start out. Capped at 12 for example and they can upgrade their heart cap higher by running this command and paying a fee, completing a quest or anything else.
+
 LifeStealZ offers a great amount of admin tools and is highly customizable. You can change every message and change everything about the custom items.
 
 <br>
