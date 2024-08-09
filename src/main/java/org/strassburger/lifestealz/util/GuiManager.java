@@ -69,8 +69,11 @@ public class GuiManager {
     }
 
     public static void openHeartBankGUI(Player player) {
-        Inventory inventory = Bukkit.createInventory(player, 9, MessageUtils.getAndFormatMsg(false, "messages.heartBankTitle", "&8Heart Bank"));
-        MiniMessage miniMessage = MiniMessage.miniMessage();
+        Inventory inventory = Bukkit.createInventory(player,
+                27,
+                MessageUtils.getAndFormatMsg(false,
+                "messages.heartBankTitle",
+                "&8Heart Bank"));
 
         ItemStack glass = new ItemStack(Material.GRAY_STAINED_GLASS_PANE, 1);
 
@@ -81,15 +84,21 @@ public class GuiManager {
 
         Component centerItemName = Component.text("&cYou currently have X amount of hearts in your heart bank.");
 
-        ItemStack centerItem = new ItemStack(Material.RED_DYE, 1);
-        ItemMeta centerItemMeta = centerItem.getItemMeta();
-        centerItemMeta.addEnchant(Enchantment.MENDING, 1, true);
-        centerItemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-        centerItemMeta.displayName(centerItemName);
+        ItemStack heartItem = new ItemStack(Material.RED_DYE, 1);
+        ItemMeta heartItemMeta = heartItem.getItemMeta();
+        heartItemMeta.addEnchant(Enchantment.MENDING, 1, true);
+        heartItemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        heartItemMeta.displayName(centerItemName);
 
-        inventory.setItem(4, centerItem);
-        for (int i = 0; i < 9; i++) {
-            if (i == 4) continue;
+        ItemStack faqItem = new ItemStack(Material.EXPERIENCE_BOTTLE, 1);
+        ItemMeta faqItemMeta = heartItem.getItemMeta();
+        heartItemMeta.displayName(Component.text("§cFAQ"));
+
+        inventory.setItem(14, heartItem);
+        inventory.setItem(12, faqItem);
+        for (int i = 0; i < 27; i++) {
+            if (i == 14) continue;
+            if (i == 12) continue;
             inventory.setItem(i, glass);
         }
 
