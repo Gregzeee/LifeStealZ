@@ -20,6 +20,7 @@ public class CommandManager {
         registerCommand("withdrawheart", new WithdrawCommand(), new WithdrawCommand());
         registerCommand("revive", new ReviveCommand(), new ReviveCommand());
         registerCommand("eliminate", new EliminateCommand(), new EliminateCommand());
+        registerCommand("heartbank", new HeartBankCommand());
     }
 
     /**
@@ -35,6 +36,21 @@ public class CommandManager {
         if (command != null) {
             command.setExecutor(executor);
             command.setTabCompleter(tabCompleter);
+            command.permissionMessage(MessageUtils.getAndFormatMsg(false, "messages.noPermsError", "<red>You do not have permission to execute this command!"));
+        }
+    }
+
+    /**
+     * Registers a command
+     *
+     * @param name The name of the command
+     * @param executor The executor of the command
+     */
+    private static void registerCommand(String name, CommandExecutor executor) {
+        PluginCommand command = plugin.getCommand(name);
+
+        if (command != null) {
+            command.setExecutor(executor);
             command.permissionMessage(MessageUtils.getAndFormatMsg(false, "messages.noPermsError", "<red>You do not have permission to execute this command!"));
         }
     }
