@@ -115,7 +115,7 @@ public class PlayerDeathListener implements Listener {
                 if (heartGainCooldowndropOnCooldown) world.dropItemNaturally(player.getLocation(), CustomItemManager.createHeart());
             } else {
                 // Handle killer gaining hearts
-                if (dropHeartsOnDeath) world.dropItemNaturally(player.getLocation(), CustomItemManager.createHeart());
+                if (dropHeartsOnDeath) killerPlayerData.setHeartbankHearts(killerPlayerData.getHeartbankHearts() + 2);
                 else {
                     if (playerData.getMaxhp() - 2.0 > minHearts || playerData.getMaxhp() - 2.0 <= minHearts && heartRewardOnElimination) {
                         if (killerPlayerData.getMaxhp() + 2.0 > maxHearts) {
