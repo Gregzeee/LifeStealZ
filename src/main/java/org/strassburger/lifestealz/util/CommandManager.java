@@ -21,6 +21,7 @@ public class CommandManager {
         registerCommand("revive", new ReviveCommand(), new ReviveCommand());
         registerCommand("eliminate", new EliminateCommand(), new EliminateCommand());
         registerCommand("heartbank", new HeartBankCommand());
+        registerCommand("withdrawheartbank", new WithdrawHeartBankCommand());
     }
 
     /**
