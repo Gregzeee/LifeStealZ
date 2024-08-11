@@ -1,6 +1,8 @@
 package org.strassburger.lifestealz.util;
 
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
+import net.kyori.adventure.text.format.TextDecoration;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -92,7 +94,9 @@ public class GuiManager {
 
         ItemStack faqItem = new ItemStack(Material.EXPERIENCE_BOTTLE, 1);
         ItemMeta faqItemMeta = heartItem.getItemMeta();
-        heartItemMeta.displayName(Component.text("§cFAQ"));
+        heartItemMeta.displayName(Component.text("FAQ").color(NamedTextColor.RED).decorate(TextDecoration.BOLD));
+        heartItemMeta.addEnchant(Enchantment.MENDING, 1, true);
+        heartItemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 
         inventory.setItem(14, heartItem);
         inventory.setItem(12, faqItem);
