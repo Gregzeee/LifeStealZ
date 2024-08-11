@@ -99,6 +99,8 @@ public class GuiManager {
         faqLore.add(Component.text("Be careful! These hearts can be withdrawn but not deposited back in.")); // TODO add color
         faqLore.add(Component.text("The only way you can gain hearts in your heartbank is killing other people.")); // TODO add color
         faqLore.add(Component.text("These hearts can be used to buy custom items from /heartshop")); // TODO add color
+        heartItemMeta.lore(faqLore);
+        heartItem.setItemMeta(heartItemMeta);
 
         inventory.setItem(14, heartItem);
         inventory.setItem(12, faqItem);
