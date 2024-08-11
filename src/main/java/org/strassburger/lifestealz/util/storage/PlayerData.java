@@ -12,6 +12,7 @@ public class PlayerData {
     private int craftedRevives = 0;
     private int hasbeenRevived = 0;
     private int killedOtherPlayers = 0;
+    private int heartbankHearts = 0;
 
     public PlayerData(String name, UUID uuid) {
         this.name = name;
@@ -65,5 +66,13 @@ public class PlayerData {
 
     public void setKilledOtherPlayers(int killedOtherPlayers) {
         this.killedOtherPlayers = killedOtherPlayers;
+    }
+
+    public int getHeartbankHearts() {
+        return heartbankHearts;
+    }
+
+    public void setHeartbankHearts(int heartbankHearts) {
+        this.heartbankHearts = heartbankHearts;
     }
 }
