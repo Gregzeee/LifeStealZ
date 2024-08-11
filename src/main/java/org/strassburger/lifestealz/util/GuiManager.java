@@ -17,10 +17,7 @@ import org.strassburger.lifestealz.LifeStealZ;
 import org.strassburger.lifestealz.util.customitems.CustomItemManager;
 import org.w3c.dom.Text;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 public class GuiManager {
     public static Map<UUID, Inventory> REVIVE_GUI_MAP = new HashMap<>();
@@ -97,6 +94,11 @@ public class GuiManager {
         heartItemMeta.displayName(Component.text("FAQ").color(NamedTextColor.RED).decorate(TextDecoration.BOLD));
         heartItemMeta.addEnchant(Enchantment.MENDING, 1, true);
         heartItemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        ArrayList<Component> faqLore = new ArrayList<>();
+        faqLore.add(Component.text("This is your heartbank. This is where any extra hearts you have will be stored.")); // TODO add color
+        faqLore.add(Component.text("Be careful! These hearts can be withdrawn but not deposited back in.")); // TODO add color
+        faqLore.add(Component.text("The only way you can gain hearts in your heartbank is killing other people.")); // TODO add color
+        faqLore.add(Component.text("These hearts can be used to buy custom items from /heartshop")); // TODO add color
 
         inventory.setItem(14, heartItem);
         inventory.setItem(12, faqItem);
